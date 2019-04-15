@@ -34,7 +34,7 @@
             watchList.appendChild(li);
         }
 
-        // 理想中的 api 
+        // 偵聽事件 'pass:' + 指定的時間點
         video.addEventListener('pass:0sec', function(e) {
             log(e.detail.original);
         });

@@ -4,7 +4,7 @@
 
 VideoWatcher 第1個參數為影片路徑
 
-VideoWatcher 第2個參數為陣列 支援3種單位 (sec, ms, %)
+VideoWatcher 第2個參數為陣列 支援3種單位 ('sec', 'ms', '%')
 
 [DEMO](https://cgh20xx.github.io/VideoWatcher.js/index.html)
 
@@ -32,7 +32,7 @@ function log(msg) {
     watchList.appendChild(li);
 }
 
-// 理想中的 api 
+// 偵聽事件 'pass:' + 指定的時間點
 video.addEventListener('pass:0sec', function(e) {
     log(e.detail.original);
 });
