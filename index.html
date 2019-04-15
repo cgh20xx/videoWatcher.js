@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>VideoWatcher.js</title>
+</head>
+<body>
+    <div id="wrapper"></div>
+    <ul id="watchList"></ul>
+    <script src="js/VideoWatcher.js"></script>
+    <script>
+        var videoSrc = 'https://wwwcontent.ad2iction.com/han/video/maze10.mp4';
+
+        var video = new VideoWatcher(videoSrc, [
+            '0sec',
+            '1sec',
+            '3sec',
+            '5500ms',
+            '25%',
+            '50%',
+            '75%',
+            '100%'
+        ]);
+        
+        video.width = 320;
+        video.controls = true;
+        wrapper.appendChild(video);
+
+        function log(msg) {
+            var li = document.createElement('li');
+            li.textContent = msg;
+            console.log(msg);
+            watchList.appendChild(li);
+        }
+
+        // 理想中的 api 
+        video.addEventListener('pass:0sec', function(e) {
+            log(e.detail.original);
+        });
+
+        video.addEventListener('pass:1sec', function(e) {
+            log(e.detail.original);
+        });
+
+        video.addEventListener('pass:3sec', function(e) {
+            log(e.detail.original);
+        });
+
+        video.addEventListener('pass:5500ms', function(e) {
+            log(e.detail.original);
+        });
+
+        video.addEventListener('pass:25%', function(e) {
+            log(e.detail.original);
+        });
+
+        video.addEventListener('pass:50%', function(e) {
+            log(e.detail.original);
+        });
+
+        video.addEventListener('pass:75%', function(e) {
+            log(e.detail.original);
+        });
+
+        video.addEventListener('pass:100%', function(e) {
+            log(e.detail.original);
+        });
+
+        video.play();
+    </script>
+    
+</body>
+</html>
