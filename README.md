@@ -6,7 +6,7 @@ VideoWatcher 第1個參數為影片路徑
 
 VideoWatcher 第2個參數為陣列 支援3種單位 (sec, ms, %)
 
-[DEMO](https://cgh20xx.github.io/VideoWatcher.js/)
+[DEMO](https://cgh20xx.github.io/VideoWatcher.js/index.html)
 
 ```javascript
 var videoSrc = 'yourVideoUrl';
