@@ -12,7 +12,7 @@
     <script>
         var videoSrc = 'https://wwwcontent.ad2iction.com/han/video/maze10.mp4';
 
-        var video = new VideoWatcher(videoSrc, [
+        var video = VideoWatcher(videoSrc, [
             '0sec',
             '1sec',
             '3sec',
@@ -25,7 +25,6 @@
         
         video.width = 320;
         video.controls = true;
-        wrapper.appendChild(video);
 
         function log(msg) {
             var li = document.createElement('li');
@@ -66,6 +65,8 @@
         video.addEventListener('pass:100%', function(e) {
             log(e.detail.original);
         });
+
+        wrapper.appendChild(video);
 
         video.play();
     </script>
