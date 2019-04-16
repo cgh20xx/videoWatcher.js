@@ -17,8 +17,6 @@
             '1sec',
             '3sec',
             '5500ms',
-            '25%',
-            '50%',
             '75%',
             '100%'
         ]);
@@ -47,14 +45,6 @@
         });
 
         video.addEventListener('pass:5500ms', function(e) {
-            log(e.detail.original);
-        });
-
-        video.addEventListener('pass:25%', function(e) {
-            log(e.detail.original);
-        });
-
-        video.addEventListener('pass:50%', function(e) {
             log(e.detail.original);
         });
 

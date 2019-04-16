@@ -37,8 +37,9 @@ var unitConvertStrategy = {
 
 /**
  * VideoWatcher
- * @param {String} src video src
- * @param {Array} watchPoints a string array. ex:['1sec', '3000ms', '50%']
+ * @param {String} src - video src
+ * @param {Array} watchPoints - support 3 types unit. ex:['1sec', '3000ms', '50%']
+ * @returns {Object} video
  */
 
 function VideoWatcher(src, watchPoints) {

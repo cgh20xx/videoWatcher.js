@@ -1,15 +1,16 @@
 # VideoWatcher.js
 
-讓你可以偵聽影片播放時任意位置。
+* 建立原生的 HTML5 Video 並可以偵聽影片任意時間點。
 
-VideoWatcher 第1個參數為影片路徑
-
-VideoWatcher 第2個參數為陣列 支援3種單位 ('sec', 'ms', '%')
+* 預設 video 為 `playsInline`、 `muted`
 
 [DEMO](https://cgh20xx.github.io/VideoWatcher.js/index.html)
 
+## Example
 ```javascript
 // VideoWatcher 回傳的是原生 HTML Video Element
+// 第1個參數為 video 路徑
+// 第2個參數為想偵聽的時間點，支援3種單位。ex:['1sec', '3000ms', '50%']
 var video = VideoWatcher(videoSrc, [
     '0sec',
     '3sec',
