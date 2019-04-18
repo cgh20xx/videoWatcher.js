@@ -116,7 +116,7 @@ function VideoWatcher(src, watchPoints) {
         var currentTime = e.target.currentTime;
         for (var i = 0; i < watchPointsSort.length; i++) {
             if (currentTime >= watchPointsSort[i].sec && !watchPointsSort[i].isDispatch) {
-                video.dispatchEvent(new CustomEvent('pass:' + watchPointsSort[i].original, {
+                video.dispatchEvent(new CustomEvent('progress:' + watchPointsSort[i].original, {
                     'detail': watchPointsSort[i]
                 }));
                 watchPointsSort[i].isDispatch = true;

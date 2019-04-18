@@ -32,32 +32,32 @@
             watchList.appendChild(li);
         }
 
-        // 偵聽事件 'pass:' + 指定的時間點
-        video.addEventListener('pass:0sec', function(e) {
+        // 偵聽事件 'progress:' + 指定的時間點
+        video.addEventListener('progress:0sec', function(e) {
             log(e.detail.original);
         });
 
-        video.addEventListener('pass:1sec', function(e) {
+        video.addEventListener('progress:1sec', function(e) {
             log(e.detail.original);
         });
 
-        video.addEventListener('pass:1.5sec', function(e) {
+        video.addEventListener('progress:1.5sec', function(e) {
             log(e.detail.original);
         });
 
-        video.addEventListener('pass:3sec', function(e) {
+        video.addEventListener('progress:3sec', function(e) {
             log(e.detail.original);
         });
 
-        video.addEventListener('pass:5500ms', function(e) {
+        video.addEventListener('progress:5500ms', function(e) {
             log(e.detail.original);
         });
 
-        video.addEventListener('pass:75%', function(e) {
+        video.addEventListener('progress:75%', function(e) {
             log(e.detail.original);
         });
 
-        video.addEventListener('pass:100%', function(e) {
+        video.addEventListener('progress:100%', function(e) {
             log(e.detail.original);
         });
 
