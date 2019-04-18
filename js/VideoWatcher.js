@@ -76,7 +76,7 @@ function VideoWatcher(src, watchPoints) {
                 var unitIndex = str.indexOf(unit); // 找出單位在字串的位置
                 if (unitIndex !== -1) {
                     // 有找到正確的單位
-                    var num = parseInt(str.substring(0, unitIndex), 10);
+                    var num = parseFloat(str.substring(0, unitIndex));
                     watchObj.sec = unitConvertStrategy[unit](num, duration);
                     break;
                 }
@@ -88,8 +88,9 @@ function VideoWatcher(src, watchPoints) {
         };
         // 由小到大排序
         var sortByAsc = function(a, b) {
-            return a - b;
+            return a.sec - b.sec;
         }
+
         return watchPoints.map(convertToSec).sort(sortByAsc);
     }
 
@@ -105,6 +106,7 @@ function VideoWatcher(src, watchPoints) {
         duration = e.target.duration;
         if (watchPoints) {
             watchPointsSort = convertToSecByDuration(duration, watchPoints);
+            console.log(watchPointsSort);
         }
     });
 
@@ -118,7 +120,6 @@ function VideoWatcher(src, watchPoints) {
                     'detail': watchPointsSort[i]
                 }));
                 watchPointsSort[i].isDispatch = true;
-                break;
             }
         }
     });

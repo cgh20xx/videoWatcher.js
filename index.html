@@ -15,6 +15,7 @@
         var video = VideoWatcher(videoSrc, [
             '0sec',
             '1sec',
+            '1.5sec',
             '3sec',
             '5500ms',
             '75%',
@@ -37,6 +38,10 @@
         });
 
         video.addEventListener('pass:1sec', function(e) {
+            log(e.detail.original);
+        });
+
+        video.addEventListener('pass:1.5sec', function(e) {
             log(e.detail.original);
         });
 
