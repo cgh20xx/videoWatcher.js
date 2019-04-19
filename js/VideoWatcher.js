@@ -1,5 +1,5 @@
 /**
- *  VideoWatcher.js
+ *  videoWatcher.js
  *
  *  Author : Hank Hsiao
  */
@@ -36,18 +36,18 @@ var unitConvertStrategy = {
 };
 
 /**
- * VideoWatcher
+ * videoWatcher
  * @param {String} src - video src
  * @param {Array} watchPoints - support 3 types unit. ex:['1sec', '3000ms', '50%']
  * @returns {Object} video
  */
 
-function VideoWatcher(src, watchPoints) {
+function videoWatcher(src, watchPoints) {
     if (!src) {
-        throw Error('[VideoWatcher] src must be URL String.');
+        throw Error('[videoWatcher] src must be URL String.');
     }
     if (!Array.isArray(watchPoints)) {
-        throw Error('[VideoWatcher] watchPoints must be an Array.');
+        throw Error('[videoWatcher] watchPoints must be an Array.');
     }
     var video = document.createElement('video');
 

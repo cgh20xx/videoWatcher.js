@@ -1,17 +1,17 @@
-# VideoWatcher.js
+# videoWatcher.js
 
 * 建立原生的 HTML5 Video 並可以偵聽影片任意時間點。
 
 * 預設 video 為 `playsInline`、 `muted`
 
-[DEMO](https://cgh20xx.github.io/VideoWatcher.js/index.html)
+[DEMO](https://cgh20xx.github.io/videoWatcher.js/index.html)
 
 ## Example
 ```javascript
-// VideoWatcher 回傳的是原生 HTML Video Element
+// videoWatcher 回傳的是原生 HTML Video Element
 // 第1個參數為 video 路徑
 // 第2個參數為想偵聽的時間點，支援3種單位。ex:['1sec', '3000ms', '50%']
-var video = VideoWatcher(videoSrc, [
+var video = videoWatcher(videoSrc, [
     '0sec',
     '1.5sec',
     '3sec',
