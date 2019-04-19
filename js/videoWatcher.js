@@ -106,7 +106,6 @@ function videoWatcher(src, watchPoints) {
         duration = e.target.duration;
         if (watchPoints) {
             watchPointsSort = convertToSecByDuration(duration, watchPoints);
-            console.log(watchPointsSort);
         }
     });
 
